@@ -1,0 +1,11 @@
+# Security configuration for To-Let Map on Apache / Hostinger
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(config\.php|\.env|\.git|schema\.sql)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Enable UTF-8 encoding default
+AddDefaultCharset UTF-8
